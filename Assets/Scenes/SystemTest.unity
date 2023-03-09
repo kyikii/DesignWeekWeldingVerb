@@ -159,8 +159,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128682311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.14, y: -6.88, z: -0.050482795}
-  m_LocalScale: {x: 30.228954, y: 1, z: 1}
+  m_LocalPosition: {x: 3.14, y: -11.04, z: -0.050482795}
+  m_LocalScale: {x: 54.610493, y: 9.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 245586521}
@@ -312,7 +312,7 @@ Animator:
   m_GameObject: {fileID: 319137968}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b28e44df946923444ac05f16f3a5f1eb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -423,15 +423,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e4b51956563621549b2524ec0975839e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 633b2714ce08d6140af0612069427250, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &319137974
@@ -762,7 +762,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.06
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -786,7 +786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6, y: 0.66, z: -10}
+  m_LocalPosition: {x: 5.6, y: 3.8000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Follow: {fileID: 319137974}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7.06
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1414,7 +1414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916625069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6, y: 0.66, z: -10}
+  m_LocalPosition: {x: 5.6, y: 3.8000002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2869,7 +2869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: 0, y: 3.14, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
