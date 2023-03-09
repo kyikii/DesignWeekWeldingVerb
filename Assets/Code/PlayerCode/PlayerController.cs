@@ -10,6 +10,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public float moveSpeed;
     private float moveInput;
+
+    Vector2 mousePosition;
+
+    public Camera Playercam;
+    public Shooting firepoint;
+    public Shooting shooter;
+
     //see void flip \/
     private bool facingRight = true;
 
@@ -46,10 +53,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
+    public void LateUpdate()
+    {
+        ProcessInputs();
+    }
 
     // Update is called once per frame
     void Update()
+
     {
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -85,8 +96,17 @@ public class PlayerController : MonoBehaviour
 
 
     }
+    void ProcessInputs()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            shooter.FireReg();
+            //knockBack.Knockback();
+        }
+    }
 
-    void Flip()
+
+void Flip()
     {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
