@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jointFab: {fileID: 0}
+  bullet: {fileID: 5319632761778582104, guid: df96c767adf68f440b57eac8619c57c9, type: 3}
 --- !u!114 &3588392561472177332
 MonoBehaviour:
   m_ObjectHideFlags: 0

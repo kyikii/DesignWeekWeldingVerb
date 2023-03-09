@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public float moveSpeed;
     private float moveInput;
+    // additional stuff (added by Gleb to implement sounds)
+    private AudioSource audioSource; // Audiosource used for sounds (duh)
+    private bool isMoving = false;
 
     Vector2 mousePosition;
 
@@ -38,19 +41,35 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-
-
-
-
     }
 
 
     private void FixedUpdate()
     {
+       
         moveInput = Input.GetAxis("Horizontal");
         OnTerrain = Physics2D.OverlapCircle(TerrainCheck.position, checkRadius, whatisTerrain);
-
+        /////
+        /*
+        //detects if the player is moving on the ground
+        if (moveInput => 0 / moveInput <= 0)
+        {
+            isMoving = true;
+        }
+        else if (moveInput = 0)
+        {
+            isMoving = false;
+        }
+        //play looping walk sound
+        if (moveInput > 0 / moveInput < 0 && !audioSource.isPlaying)
+        {
+            audioSource.Play(); // Start to play walk sound
+        }
+        else if(moveInput == 0 && audioSource.isPlaying)
+        {
+            audioSource.Stop(); // Stop walking sound
+        }
+        */
     }
 
     public void LateUpdate()
@@ -101,7 +120,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             shooter.FireReg();
-            //knockBack.Knockback();
         }
     }
 
@@ -112,6 +130,5 @@ void Flip()
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
-
     }
 }

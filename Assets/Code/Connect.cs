@@ -7,8 +7,9 @@ public class Connect : MonoBehaviour
         private void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the collision is between two objects that can be joined (First checks for colliding object and second is the object in wich the script is attatched too)
-        if (collision.gameObject.CompareTag("Metallic") && gameObject.CompareTag("Metallic"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("ITS A HITTER");
             // Create a new 'FixedJoint2D' component and attaches it to each of the colliding objects
             FixedJoint2D joint = collision.gameObject.AddComponent<FixedJoint2D>();
             joint.connectedBody = gameObject.GetComponent<Rigidbody2D>();
