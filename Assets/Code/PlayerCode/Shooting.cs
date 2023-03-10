@@ -12,20 +12,16 @@ public class Shooting : MonoBehaviour
 
     public Rigidbody2D rb;
     public PlayerController playerController;
-
-
-    public void Fire()
-    {
-        GameObject projectile = Instantiate(BigBullet, firePoint.position, firePoint.rotation);
-        projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-        rb.AddForce(-firePoint.up);
-        Debug.Log("GoFlying!");
-    }
-
+    [SerializeField] private AudioSource slimeShootSound; // More audio shizz
+    [SerializeField] private AudioClip slimeShootClip; // Audio clip
     public void FireReg()
     {
         GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         Debug.Log("Weldy");
+        
+
+        slimeShootSound.PlayOneShot(slimeShootClip);
+        Debug.Log("slimeShootSound Plays"); 
     }
 }
